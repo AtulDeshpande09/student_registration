@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <header>
+        <title>Register</title>
+    </header>
+
+    <style>
+        div{
+            display: flex;
+            background-color: rgb(42, 42, 52);
+            flex-direction: column;
+        }
+        body{
+            background-color: rgb(35,35,45);
+        }
+
+        .head{
+            border-radius: 20px;
+            text-align: center;
+            margin: 20px;
+            color: azure;
+            box-shadow: 0 0 5px rgb(251, 206, 152);
+        
+        }
+
+        .form{
+            border-radius: 20px;
+            text-align: center;
+            color: azure;
+            box-shadow: 0 0 5px rgb(251, 206, 152);
+        }
+        label{
+            margin: 10px;
+            margin-top: 10px;
+        }
+    </style>
+
+    <body>
+        <div class="head">
+            <h2>Student Registration Form</h2>
+        </div>
+
+        <div class="form">
+		<form action="/register",method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter Your Firstname" name="Name">
+                <br><br>
+                
+		<label for="email">E-Mail</label>
+                <input type="email" id="email" placeholder="Enter Email" name="Email"><br><br>
+
+                <label for="gender">Gender :</label><br>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="Gender"><br>
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="Gender"><br><br>
+
+                <label for="course">Select Branch</label>
+                <select>
+                    <option value="AIML">AIML</option>
+                    <option value="ds">Data Science</option>
+                    <option value="Mech">Mech</option>
+                    <option value="CSE">CSE</option>
+                </select><br><br>
+
+                <label for="psw">Password</label>
+                <input type="password" id="psw" placeholder="Enter password" name="Password"><br><br>
+                
+                
+
+                <input type="submit" value="Submit">
+
+
+            </form>
+        </div>
+    </body>
+</html>

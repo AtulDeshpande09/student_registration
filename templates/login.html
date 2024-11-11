@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <header>
+        <title>Register</title>
+    </header>
+
+    <style>
+        div{
+            display: flex;
+            background-color: rgb(42, 42, 52);
+            flex-direction: column;
+        }
+        body{
+            background-color: rgb(35,35,45);
+        }
+
+        .head{
+            border-radius: 20px;
+            text-align: center;
+            margin: 20px;
+            color: azure;
+            box-shadow: 0 0 5px rgb(251, 206, 152);
+        
+        }
+
+        .form{
+            border-radius: 20px;
+            text-align: center;
+            color: azure;
+            box-shadow: 0 0 5px rgb(251, 206, 152);
+        }
+        label{
+            margin: 10px;
+            margin-top: 10px;
+        }
+    </style>
+
+    <body>
+        <div class="head">
+            <h2>Student Registration Form</h2>
+        </div>
+
+        <div class="form">
+            <form action="/login" method="POST">
+               
+		<label for="email">E-Mail</label>
+                <input type="email" id="email" placeholder="Enter Email" name="Email"><br><br>
+
+                <label for="psw">Password</label>
+                <input type="password" id="psw" placeholder="Enter password" name="Password"><br><br>
+                
+		                
+
+                <input type="submit" value="Submit">
+
+
+            </form>
+        </div>
+    </body>
+</html>
