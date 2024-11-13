@@ -21,11 +21,6 @@ login_manager = LoginManager(app)
 
 
 
-# import routes , models and forms
-
-#from models import Student
-from forms import RegistrationForm , LoginForm
-
 @app.route('/')
 def dash():
     return render_template('dashboard.html')
@@ -38,20 +33,17 @@ def register():
     from models import Student
     from query import add_student
     if request.method=='POST':
+        response = request.form
         
-        #Store Data in variable temporarily
-        name = form.name.data
-        email = form.email.data
-        gender = form.gender.data
-        #course = request.form['Course']
-        password = form.password.data
+        name = response['name']
+        email = response['email']
+        course = response['course']
+        password = response['password']
         
         # Add it to database
-        add_student(name,email,gender,password)
+        add_student(name,email,course,password)
 
-        flash('Student Registered Successfully','success')
-
-        return redirect(url_for('dashboard.html'))
+        return "Student Registered Successfully!"
     
     return render_template('register.html')
 
